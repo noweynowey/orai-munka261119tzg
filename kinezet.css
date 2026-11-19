@@ -1,0 +1,91 @@
+*{
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 5px;
+    opacity: 0.2;
+}
+
+main>*{
+    height: 200px;
+    text-align: right;
+    color: white;
+    padding: 5px;
+    opacity: 0.2;
+}
+
+*:hover{
+    opacity: 1;
+}
+
+header{
+    grid-area: h;
+    background-image: url("img/dandelion.jpg");
+}
+footer{
+    grid-area: f;
+    background-image: url("img/dandy.gif");
+}
+article{
+    grid-area: ar;
+    background-image: url("img/dandy2.gif");
+}
+
+aside{
+    grid-area: as;
+    background-image: url("img/dand3.jpg");
+}
+
+nav{
+    grid-area: n;
+    background-image: url("img/dand2.jpg")
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    ' h n n'
+    ' as f ar';
+    gap: 5px;
+}
+ol{
+    list-style: none;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-auto-flow: column;
+    justify-content: start;
+    align-items: center;
+    background-color: rgba(137, 43, 226, 0.37);
+    height: 50px;
+}
+
+li{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+    main{
+        display:grid;
+        grid-template-columns: 1fr;
+        gap: 5px;
+        grid-template-areas: 
+        ' h'
+        ' n'
+        ' n'
+        ' as'
+        ' f'
+        ' ar'
+        ;
+    }
+}
